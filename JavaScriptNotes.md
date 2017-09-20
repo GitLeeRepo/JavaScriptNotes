@@ -2,7 +2,7 @@
 
 JavaScript notes, particularly as it applies to browsers
 
-# Chrome Tools
+# Chrome Tools and JavaScript Examples
 
 Note: most of the notes in this section are from the [LearnWebCode](https://www.youtube.com/watch?v=zPHerhks2Vg&t=302s) YouTube video.
 
@@ -36,3 +36,11 @@ document.getElementById("output").innerHTML = "This is a test";
 ```
 Assuming you have an element with an id of "output" it sets this elements innerHTML, useful for many elements.
 
+# More Examples (using script files instead of console)
+
+* To get elements by TagName (p, ul, li, etc) within a parent element (<li> in <ul>) selected by class
+
+```
+var listItems = document.getElementById(inIdTag).getElementsByTagName("li");
+```
+Will assign an array of all the \<li\> elements which can be accessed individually by index, e.g. `listItems[0]`
