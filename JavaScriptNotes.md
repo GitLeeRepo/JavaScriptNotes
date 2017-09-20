@@ -41,6 +41,6 @@ Assuming you have an element with an id of "output" it sets this elements innerH
 * To get elements by TagName ("p", "ul", "li", etc) within a parent element (ex: the \<ul\> parent of the\<li\>) selected by class
 
 ```
-var listItems = document.getElementById(inIdTag).getElementsByTagName("li");
+var listItems = document.getElementById("theUlTagId").getElementsByTagName("li");
 ```
-Will assign an array of all the \<li\> elements which can be accessed individually by index, e.g. `listItems[0]`
+This will assign an array of all the \<li\> elements, which can then be accessed individually by index, e.g. `listItems[0]`
