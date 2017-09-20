@@ -42,5 +42,8 @@ Assuming you have an element with an id of "output" it sets this elements innerH
 
 ```
 var listItems = document.getElementById("theUlTagId").getElementsByTagName("li");
+for (i = 0; i < 4; i++) {
+    listItems[i].style.color = "red";
+}
 ```
 This will assign an array of all the \<li\> elements, which can then be accessed individually by index, e.g. `listItems[0]`
