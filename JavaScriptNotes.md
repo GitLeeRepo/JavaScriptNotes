@@ -38,7 +38,7 @@ Assuming you have an element with an id of "output" it sets this elements innerH
 
 # More Examples (using script files instead of console)
 
-* To get elements by TagName ("p", "ul", "li", etc) within a parent element (\<li\> in \<ul\>) selected by class
+* To get elements by TagName ("p", "ul", "li", etc) within a parent element (ex: the \<ul\> parant of the\<li\>) selected by class
 
 ```
 var listItems = document.getElementById(inIdTag).getElementsByTagName("li");
