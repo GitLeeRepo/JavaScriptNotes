@@ -36,6 +36,10 @@ document.getElementById("output").innerHTML = "This is a test";
 ```
 Assuming you have an element with an id of "output" it sets this elements innerHTML, useful for many elements.
 
+* Console output from JavaScript files
+
+You can write to the Chrome console from any JavaScript (whether separate file or in the HTML) with `console.log("message");`
+
 # More Examples (using script files instead of console)
 
 * To get elements by TagName ("p", "ul", "li", etc) within a parent element (ex: the \<ul\> parent of the\<li\>) selected by class
