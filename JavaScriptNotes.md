@@ -4,9 +4,11 @@ JavaScript notes, particularly as it applies to browsers
 
 # Chrome Tools
 
+Note: most of the notes in this section are from the [LearnWebCode](https://www.youtube.com/watch?v=zPHerhks2Vg&t=302s) YouTube video.
+
 The **Chrome Developer** Tools (right-click the page then select Inspect)is useful for running JavaScript interactively with the session.
 
-* On the console enter these as an examples (note the ending semi-colon not needed):
+* On the console enter these as an examples (note the ending semi-colon not required):
 
 ```
 window
@@ -28,4 +30,9 @@ document.getElementById("filename").value;
 ```
 Assuming you have an element with an id of "filename" it displays this elements **value attribute**, useful for example with text input elements.
 
+
+```
+document.getElementById("output").innerHTML = "This is a test";
+```
+Assuming you have an element with an id of "output" it sets this elements innerHTML, useful for many elements.
 
