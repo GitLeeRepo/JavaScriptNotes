@@ -32,4 +32,37 @@ Notes on the JSON data exchange format
 
 * Objects - Unordered Collection of **Key: Value** pairs. Can contain multiple tiers of embedded objects.  Enclosed in curly brackets.
 
-* Null - Empty value, undefined.
+* Null - Empty value.
+
+# JSON Syntax
+
+* Uses Key Value Pairs
+
+`{ "key": "value" }`, for example `{ "name": "John" }`
+
+* Both the **key** and the **value** must be in double quotes, unlike JavaScript Literals in which the key normally isn't.
+
+* When in files it uses a **.json** file extension
+
+* MIME Type is **"Application/json"**
+
+# JSON Examples
+
+## Example 1
+
+```
+{
+	first_name: "John",
+	last_name: "Doe",
+	age: 40,
+	gender: "male",
+	memberships: ["mem1", "mem2"],
+	address: {
+				street: "1111 N 1st",
+				city: "Boston",
+				state: "MA"
+			},
+	balance: 99.99
+}
+``` 
+Note the embedded arrays (membership) and objects (address)
