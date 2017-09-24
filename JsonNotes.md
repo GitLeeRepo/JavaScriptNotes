@@ -40,7 +40,11 @@ Notes on the JSON data exchange format
 
 `{ "key": "value" }`, for example `{ "name": "John" }`
 
-* Both the **key** and the **value** must be in double quotes, unlike JavaScript Literals in which the key normally isn't.
+* The **key** must be in double quotes, unlike JavaScript Literals in which the key normally isn't.  Whether **value** is in double quotes depends on the data type.
+
+* Arrays are enclosed in square brackets
+
+* Embedded objects are in curly brackets
 
 * When in files it uses a **.json** file extension
 
@@ -52,17 +56,17 @@ Notes on the JSON data exchange format
 
 ```
 {
-	first_name: "John",
-	last_name: "Doe",
-	age: 40,
-	gender: "male",
-	memberships: ["mem1", "mem2"],
-	address: {
+	"first_name": "John",
+	"last_name": "Doe",
+	"age": 40,
+	"gender": "male",
+	"memberships": ["mem1", "mem2"],
+	"address": {
 				street: "1111 N 1st",
 				city: "Boston",
 				state: "MA"
 			},
-	balance: 99.99
+	"balance": 99.99
 }
 ``` 
 Note the embedded arrays (membership) and objects (address)
