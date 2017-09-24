@@ -17,3 +17,18 @@ Notes on the AJAX programming model
 
 * Used with REST APIs which generally return JSON
 
+* Uses XmlHttpRequest() JavaScript function to make the request which creates an object that can then process the response
+
+# XmlHttpRequest (XHR) Object
+
+* An API in the form of an object
+
+* Provided by the browsers JavaScript environment
+
+* Provides methods for transferring data between the client and the server
+
+* Can be used with protocols other than HTTP
+
+* Can be used with data other than XML (JSON, text files, etc)
+
+
