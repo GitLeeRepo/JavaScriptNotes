@@ -17,9 +17,11 @@ Notes on the AJAX programming model
 
 * Used with REST APIs which generally return JSON
 
-* Uses XmlHttpRequest() JavaScript function to make the request which creates an object that can then process the response
+* Uses XmlHttpRequest() function in JavaScript to make the request which creates an object that can then process the response
 
-# XmlHttpRequest (XHR) Object
+* In addition to XmlHttpRequest, there are other libararies with methods for making AJAX calls.  Examples include, jQuery, Axios, Superagent, Fetch API, Prototype, Node HTTP.
+
+# XmlHttpRequest (XHR) Object in JavaScript
 
 * An API in the form of an object
 
