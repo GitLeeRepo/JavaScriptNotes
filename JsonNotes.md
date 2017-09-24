@@ -50,9 +50,13 @@ Notes on the JSON data exchange format
 
 * MIME Type is **"Application/json"**
 
+* Note JSON cannot contain embedded functions like a JavaScript function can
+
+* You can check if your JSON is valid at [https://jsonlint.com/](https://jsonlint.com/)
+
 # JSON Examples
 
-## Example 1
+## Example 1 - JSON with embedded arrays and objects
 
 ```
 {
@@ -70,3 +74,30 @@ Notes on the JSON data exchange format
 }
 ``` 
 Note the embedded arrays (membership) and objects (address)
+
+## Example 2 - Converting between JSON and JavaScript objects
+
+* To use JavaScript to convert back and forth between JSON and JavaScript objects:
+
+```
+<script>
+	var person = {
+		name: "John Doe",
+		age: 44
+	}
+	
+	// note at this point person is a valid object: person.name is a legal reference
+	
+	// to convert JavaScript object to JSON - will add the double quotes to the key
+	person = JSON.stringify(person);
+	
+	// note the above person can no longer be used as an object: person.name would be undefined
+	
+	// to convert back to JavaScript from JSON - will make it a valid JavaScript Object again
+	person = JSON.parse(person);
+	
+	// now person is a valid object: person.name is a legal again	
+</script>
+```
+
+
