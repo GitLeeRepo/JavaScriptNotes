@@ -62,10 +62,10 @@ Notes on the JSON data exchange format
 	"gender": "male",
 	"memberships": ["mem1", "mem2"],
 	"address": {
-				street: "1111 N 1st",
-				city: "Boston",
-				state: "MA"
-			},
+			street: "1111 N 1st",
+			city: "Boston",
+			state: "MA"
+		   },
 	"balance": 99.99
 }
 ``` 
