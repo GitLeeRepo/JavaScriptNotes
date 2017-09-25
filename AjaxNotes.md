@@ -279,4 +279,4 @@ This is the same as the prior example, but it uses POST instead of GET.  Notice 
 </body>
 </html>
 ```
-Note: In addition to slightly more code to handle that parameters, post also includes the xhr.setRequestHeader() method to set the content type.
+Note: In addition to slightly more code to handle the parameters, post also includes the xhr.setRequestHeader() method to set the content type.
