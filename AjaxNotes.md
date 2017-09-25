@@ -33,4 +33,43 @@ Notes on the AJAX programming model
 
 * Can be used with data other than XML (JSON, text files, etc)
 
+# Examples
 
+# Ex 1 - Get and display text file
+
+* Update the div section with contents of text file
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax 1</title>
+</head>
+<body>
+    <button id="button">Get Text file</button>
+
+    <div id="output" style="margin-top:30px" ></div>
+
+    <script>
+        document.getElementById("button").addEventListener("click", loadText);
+
+        function loadText() {
+            var xhr = new XMLHttpRequest();
+
+            xhr.onload = function () {
+                if (this.status == 200) {
+                    document.getElementById("output").innerHTML = xhr.responseText;
+                }
+                else {
+                    document.getElementById("output").innerHTML =
+                        'Unable to load file, status = ' + this.status;
+                }
+            }
+            xhr.open("GET", "test.txt");
+            xhr.send();
+        }
+    </script>
+</body>
+</html>
+```
