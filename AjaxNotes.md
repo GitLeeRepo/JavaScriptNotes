@@ -126,6 +126,8 @@ Use with onload to handle any errors in processing the request
 
 ## Ex2 - Get JSON user data
 
+* Get JSON data from the json\users.json file
+
 ```javascript
 function loadUsers(outId) {
     var xhr = new XMLHttpRequest();
@@ -139,10 +141,6 @@ function loadUsers(outId) {
                 document.getElementById(outId).innerHTML +=
                     users[i].name + ' is ' + users[i].age + ' and lives in ' + users[i].city + '<br>';
             }
-        }
-        else {
-            document.getElementById(outId).innerHTML =
-                'Unable to load file, status = ' + this.status;
         }
     }
     xhr.send();
