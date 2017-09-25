@@ -100,4 +100,16 @@ Note the embedded arrays (membership) and objects (address)
 </script>
 ```
 
+# PHP Example Returning JSON
 
+* Returning JSON from a MySQL query
+
+```php
+$query = 'SELECT * FROM users';
+$result = mysqi_query($conn, $query));
+
+$users = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+// convert $users associative array to JSON
+echo json_encode($users);
+```
