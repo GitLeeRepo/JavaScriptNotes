@@ -173,3 +173,14 @@ function loadGitHubUsers(outId) {
 }
 ```
 Note: For security reasons browser place a restriction limiting requests to the current server. But if the external site complies with the proper criteria helping to ensure safe access, such as using CORS (Cross Origin Resource Sharing) specification external site data can be accessed.  This is typically what is done on sites that provide a web API.
+
+## Ex 4 - Using parameters when using XMLHttpRequest's open method
+
+* Making a request from a PHP server side script
+
+```
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'getUserInfo.php?name=Bill');
+```
+Note: this is the same way of providing a GET parameter with a form request to a PHP script, but in the case of using AJAX methods (XMLHttpRequest) the entire page does not need to be refreshed.
+
