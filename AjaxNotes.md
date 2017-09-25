@@ -184,3 +184,51 @@ Note: For security reasons browser place a restriction limiting requests to the 
 ```
 Note: this is the same way of providing a GET parameter with a form request to a PHP script, but in the case of using AJAX methods (XMLHttpRequest) the entire page does not need to be refreshed.
 
+# Ex 5 - Using an HTML form to submit an AJAX request
+
+As long as you take steps to prevent the page reload you can use a form to submit an AJAX request
+
+* Example calling a PHP script using the forms text field to provide a parameter:
+
+```javascript
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax with Form</title>
+</head>
+<body>
+    <form id="getForm">
+        <input type="text" name="name" id="name1">
+        <input type="submit" value = "Submit">
+    </form>
+    <br><br>
+    <div id="out"></div>
+
+<script>
+    document.getElementById("getForm").addEventListener("submit", getName);
+
+    function getName(e) {
+        //Prevent default action, in this case:
+        //Prevent a submit button from submitting a form
+        e.preventDefault();
+
+        var name = document.getElementById("name1").value;
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "process.php?name="+name);
+
+        xhr.onload = function () {
+            if (this.status == 200) {
+                document.getElementById("out").innerHTML = this.responseText;
+            }
+
+        }
+        xhr.send();
+    }
+</script>
+</body>
+</html>
+```
+
+Note: to prevent the reload of the page e.preventDefault() is used in the event handler
