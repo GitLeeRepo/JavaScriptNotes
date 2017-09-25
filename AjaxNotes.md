@@ -63,6 +63,26 @@ xhr.onload = function () {
 
 Note here you don't need to check readyState since onload is only triggered when the readyState is 4.
 
+# Additional XHR methods and properties
+
+## onprogress
+
+```javascript
+xhr.onprogress = function () {
+    console.log("In onprogress");
+}
+```
+You can use this if you want to display a progress indicator
+
+## onerror
+
+```javascript
+xhr.onerror = function () {
+    console.log("Error Occurred");
+}
+```
+Use with onload to handle any errors in processing the request
+
 # Examples
 
 # Ex 1 - Get and display text file
@@ -102,4 +122,29 @@ Note here you don't need to check readyState since onload is only triggered when
     </script>
 </body>
 </html>
+```
+
+## Ex2 - Get JSON user data
+
+```javascript
+function loadUsers(outId) {
+    var xhr = new XMLHttpRequest();
+
+    xhr.open('GET', 'json/users.json');
+    xhr.onload = function () {
+        if (this.status == 200) {
+            var users = JSON.parse(this.responseText);
+            document.getElementById(outId).innerHTM = '';
+            for (i in users) {
+                document.getElementById(outId).innerHTML +=
+                    users[i].name + ' is ' + users[i].age + ' and lives in ' + users[i].city + '<br>';
+            }
+        }
+        else {
+            document.getElementById(outId).innerHTML =
+                'Unable to load file, status = ' + this.status;
+        }
+    }
+    xhr.send();
+}
 ```
