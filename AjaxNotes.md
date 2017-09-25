@@ -146,3 +146,30 @@ function loadUsers(outId) {
     xhr.send();
 }
 ```
+Note the use of the JSON.parse() method.  This is needed to convert the JSON data into a JavaScript object, so its individual properties can be accessed.
+
+## Ex3 - Getting JSON from an external API
+
+* Using the GitHub API to get user data
+
+```javascript
+function loadGitHubUsers(outId) {
+    var xhr = new XMLHttpRequest();
+
+    xhr.open('GET', 'https://api.github.com/users');
+    xhr.onload = function () {
+        if (this.status == 200) {
+            var users = JSON.parse(this.responseText);
+            document.getElementById(outId).innerHTM = '';
+            for (var i = 0; i < 5; i++) {
+                document.getElementById(outId).innerHTML +=
+                    '<img src="' + users[i].avatar_url + '" width="70" height="70">' +
+                    ' id: ' + users[i].id +
+                    ' login: ' + users[i].login + '<br>';
+            }
+        }
+    }
+    xhr.send();
+}
+```
+Note: For security reasons browser place a restriction limiting requests to the current server. But if the external site complies with the proper criteria helping to ensure safe access, such as using CORS (Cross Origin Resource Sharing) specification external site data can be accessed.  This is typically what is done on sites that provide a web API.
