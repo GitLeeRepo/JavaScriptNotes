@@ -33,6 +33,36 @@ Notes on the AJAX programming model
 
 * Can be used with data other than XML (JSON, text files, etc)
 
+# Old vs New way of processing the response
+
+* Old way with onReadyStateChange
+
+```JavaScript
+var xhr = new XMLHttpRequest();
+
+xhr.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("output").innerHTML = xhr.responseText;
+    }
+}
+```
+
+Note with this method you must check the readyState in addition to the status
+
+* New way with onload
+
+```JavaScript
+var xhr = new XMLHttpRequest();
+
+xhr.onload = function () {
+    if (this.status == 200) {
+        document.getElementById("output").innerHTML = xhr.responseText;
+    }
+}
+```
+
+Note here you don't need to check readyState since onload is only triggered when the readyState is 4.
+
 # Examples
 
 # Ex 1 - Get and display text file
