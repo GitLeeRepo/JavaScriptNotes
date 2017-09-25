@@ -37,7 +37,7 @@ Notes on the AJAX programming model
 
 * Old way with onReadyStateChange
 
-```JavaScript
+```javascript
 var xhr = new XMLHttpRequest();
 
 xhr.onreadystatechange = function () {
@@ -51,7 +51,7 @@ Note with this method you must check the readyState in addition to the status
 
 * New way with onload
 
-```JavaScript
+```javascript
 var xhr = new XMLHttpRequest();
 
 xhr.onload = function () {
@@ -69,7 +69,7 @@ Note here you don't need to check readyState since onload is only triggered when
 
 * Update the div section with contents of text file
 
-```
+```javascript
 <!DOCTYPE html>
 <html lang="en">
 <head>
