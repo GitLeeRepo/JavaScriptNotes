@@ -216,13 +216,12 @@ As long as you take steps to prevent the page reload you can use a form to submi
         var name = document.getElementById("name1").value;
 
         var xhr = new XMLHttpRequest();
-        xhr.open("GET", "process.php?name="+name);
+        xhr.open("GET", "process.php?name="+name);  // with GET params go here
 
         xhr.onload = function () {
             if (this.status == 200) {
                 document.getElementById("out").innerHTML = this.responseText;
             }
-
         }
         xhr.send();
     }
@@ -232,3 +231,52 @@ As long as you take steps to prevent the page reload you can use a form to submi
 ```
 
 Note: to prevent the reload of the page e.preventDefault() is used in the event handler
+
+## Ex 6 - Using POST instead of GET
+
+This is the same as the prior example, but it uses POST instead of GET.  Notice how POST require slightly more code to handle the parameters than GET does.
+
+* POST Example:
+
+```javascript
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax with Form</title>
+</head>
+<body>
+    <form id="postForm">
+        <input type="text" name="name" id="name2">
+        <input type="submit" value = "Submit">
+    </form>
+    <br><br>
+    <div id="out"></div>
+
+<script>
+    document.getElementById("postForm").addEventListener("submit", postName);
+
+    function postName(e) {
+        //Prevent default action, in this case:
+        //Prevent a submit button from submitting a form
+        e.preventDefault();
+
+        var name = document.getElementById("name2").value;
+        var params = "name="+name;
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "process.php");  // with POST no params here
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+        xhr.onload = function () {
+            if (this.status == 200) {
+                document.getElementById("out").innerHTML = this.responseText;
+            }
+        }
+        xhr.send(params);  // with POST we send the params here
+    }
+</script>    
+</body>
+</html>
+```
+Note: In addition to slightly more code to handle that parameters, post also includes the xhr.setRequestHeader() method to set the content type.
