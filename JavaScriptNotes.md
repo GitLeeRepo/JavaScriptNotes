@@ -2,6 +2,32 @@
 
 JavaScript notes, particularly as it applies to browsers
 
+# References
+* [W3 Schools](https://www.w3schools.com/js/default.asp)
+* [ES6 Series](https://www.youtube.com/watch?v=2LeqilIw-28&list=PLillGF-RfqbZ7s3t6ZInY3NjEOOX7hsBv) YouTube series by Traversy Media
+
+# Recent Versions
+
+* ES5/2009 - ECMAScript
+
+* ES6/2015 - ECMAScript.  New features
+
+    * Backward compatible with ES5
+    
+    * **let** and **const** declarations
+    
+    * Classes and inheritance
+    
+    * Template strings
+    
+    * New data structures
+    
+    * Iterators
+    
+    * Promises and Asynchronous data
+    
+    * Arrow functions   
+
 # Chrome Tools and JavaScript Examples
 
 Note: most of the notes in this section are from the [LearnWebCode](https://www.youtube.com/watch?v=zPHerhks2Vg&t=302s) YouTube video.
