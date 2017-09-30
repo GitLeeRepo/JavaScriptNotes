@@ -162,3 +162,26 @@ To include an index
 </ul>
 ```
 This will prefix each hobby with a number (the index + 1), so starting at 1
+
+# Events
+
+## Click event
+
+* In the user.component.html
+
+```html
+<button (click)="onClick()">Click here</button>
+```
+
+* In the user.component.ts
+
+```typescript
+export class UserComponent implements OnInit {
+  
+  ...
+
+  onClick(){
+    console.log('Clicked');
+  }
+}
+```
