@@ -124,6 +124,16 @@ Angular uses TypeScript rather than JavaScript itself
     
     * app.component.html - the main HTML template file
     
-    
+ # Components
+ 
+ * To generate a component in the src/app/components folder (you need to create components if it doesn't exist)
+ 
+ `ng g component components/user`
+ 
+  Generates (the "g" option above) a component named user in src/app/components with its starter TypeScript and HTML files.  It also updates the app.module.ts file adding the new component.
+  
+  * Your component initialiations should be placed in the ngOnInit() method within the UserComponent class just generated in the user.component.ts file (recommended over the constructor)
+  
+  
   
   
