@@ -185,3 +185,31 @@ export class UserComponent implements OnInit {
   }
 }
 ```
+
+## Form Submit event
+
+* In the user.component.html
+
+```html
+<form (submit)="addHobby(hobby.value)">
+  <div>
+    <label for="hobby">Hobbie: </label>
+    <input type="text" #hobby>
+  </div>
+</form>
+```
+Note the `#hobby` tag on the input iss used in the event signature `addHobby(hobby.value)`
+
+* In the user.component.ts
+
+```typescript
+export class UserComponent implements OnInit {
+  
+  ...
+
+  addHobby(hobby){
+    this.hobbies.push(hobby);
+    return false; // prevent the new item from disappearing due to a refresh to the orig
+  }
+}
+```
