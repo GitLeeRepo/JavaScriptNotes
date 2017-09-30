@@ -276,6 +276,13 @@ Note the FormsModule must be both imported and placed in the **imports:** sectio
     <input type="text" [(ngModel)]="name" name="name">
   </div>
   ...
+  <div>
+    <label for="street">Street: </label>
+    <input type="text" [(ngModel)]="address.city" name="city">
+  </div>
+  ...
 </form>
 ```
 Now whenever the name on the form is changed the component propery "name" will also be updated and displayed wherever it is used.  Note this is dynamic as you type each letter, it does not require a form submit.  Note the `[(ngModel)]="name"` syntax for establishing the two way binding.  Also note the name attribute is also set
+
+Note that because "city" is part of the address object it must be fully qualified as "address.city" in the Angular two way bind (`[(ngModel)]`), but not in the HTML name attribute
