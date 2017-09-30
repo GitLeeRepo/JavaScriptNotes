@@ -72,4 +72,28 @@ Angular uses TypeScript rather than JavaScript itself
  
  * **Decorators** mark HTML classes as Angular components
 
+# Installation
+
+* Node.js must be installed first in order to use the NPM package manager.  Refer to [NodeJsNotes](https://github.com/GitLeeRepo/NodejsNotes/blob/master/NodejNotes.md#overview) for info on this.
+
+* Run npm to install Angular globally
+
+`npm install -g @angular/cli`
+
+* Create the initial application specific framework
+
+ * Create and switch to the project folder
+ 
+ * To initialize an app called a4app
+ 
+ `ng new a4app`
+
+* Change to the generated app folder (a4app in this case)
+
+* Run ng serve to start the development server on port 4200 by default
+
+`ng serve`
+
+* Load the intial app in the browsers at `localhost:4200` to verify installation
+
 
