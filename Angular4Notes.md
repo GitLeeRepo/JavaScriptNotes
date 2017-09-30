@@ -213,3 +213,29 @@ export class UserComponent implements OnInit {
   }
 }
 ```
+
+## Processing a delete through a click event
+
+* In the user.component.html
+
+```html
+
+```
+
+* In the user.component.ts
+
+```typescript
+export class UserComponent implements OnInit {
+  
+  ...
+
+  deleteHobby(hobby){
+    for (let i = 0; i < this.hobbies.length; i++){
+      if (this.hobbies[i] == hobby) {
+        // remove from array
+        this.hobbies.splice(i, 1);
+      }
+    }
+  }
+}
+```
