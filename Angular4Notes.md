@@ -96,4 +96,34 @@ Angular uses TypeScript rather than JavaScript itself
 
 * Load the intial app in the browsers at `localhost:4200` to verify installation
 
+# Structure of the Angular App
 
+* package.json - your project configuration and dependencies
+
+ * Has `ng serve` for starting the app
+ 
+ * Has `ng build` for compiling the apps static assets
+ 
+* angular-cli.json - configurations specific to the Angular CLI
+
+  * Contains ouput directories
+  
+  * Style sheets
+  
+  * Script file mappings
+  
+* node_modules - your modules in the dependencies
+  
+ * src - HTML files, TypeScript files, Style Sheets
+ 
+  * app subfolder - the application itself
+  
+    * app.module.ts - where all your components, services and modules are tied together.  Everything needs to be imported to here and then added to the @ngModule directive
+    
+    * app.component.ts - the main app component, including the AppComponent class
+    
+    * app.component.html - the main HTML template file
+    
+    
+  
+  
