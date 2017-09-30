@@ -137,4 +137,20 @@ Angular uses TypeScript rather than JavaScript itself
   * Replace the default HTML in src/app-component.html with `<app-user></app-user>`.  app-user comes from the @Component directive selector: 'app-user' in the app/components/user/user.component.ts file.  Now the browser page shows the default "user works!" text from the user.component.html file. 
   
   * To create a display a property add a name property to the UserComponent class in app/component/user/user.component.ts, ex `name = 'Bill'` and display it through the app/component/user/user.component.html template using double curly brackets, ex `<h1>Hello {{name}}</h1>`
+  Note the double curly brackets are referred to as **string interpolation**
   
+# Code directives
+
+## ngFor directive
+
+Allows the looping through arrays within the HTML itself
+
+* Example (Assuming the property **hobbies** is defined in the UserComponent class)
+
+```html
+<ul>
+  <li *ngFor="let hobby of hobbies">{{hobby}}</li>
+</ul>
+```
+This will display a list of hobbies, with one `<li></li>` pair for each hobby
+
