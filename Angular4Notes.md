@@ -219,8 +219,9 @@ export class UserComponent implements OnInit {
 * In the user.component.html
 
 ```html
-
+  <li *ngFor="let hobby of hobbies">{{hobby}} <button (click)="deleteHobby(hobby)">x</button></li>
 ```
+Added the `<button></button>` with the click event to the existing `<li></li>`
 
 * In the user.component.ts
 
@@ -239,3 +240,42 @@ export class UserComponent implements OnInit {
   }
 }
 ```
+
+# Two way data binding
+
+Binds data in the HTML template to the component, with changes being reflected in both directions
+
+* Need to use ngmodel which requires the forms module to be imported to **app.module.ts**
+
+```typescript
+import { FormsModule } from '@angular/forms'
+
+...
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    UserComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+```
+Note the FormsModule must be both imported and placed in the **imports:** section of the **@NgModule** directive.
+
+* Within user.component.html add the two way binding notation
+
+```html
+<form>
+  <div>
+    <label for="name">Name: </label>
+    <input type="text" [(ngModel)]="name" name="name">
+  </div>
+  ...
+</form>
+```
+Now whenever the name on the form is changed the component propery "name" will also be updated and displayed wherever it is used.  Note this is dynamic as you type each letter, it does not require a form submit.  Note the `[(ngModel)]="name"` syntax for establishing the two way binding.  Also note the name attribute is also set
