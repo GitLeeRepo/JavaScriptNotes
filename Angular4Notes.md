@@ -154,3 +154,11 @@ Allows the looping through arrays within the HTML itself
 ```
 This will display a list of hobbies, with one `<li></li>` pair for each hobby
 
+To include an index
+
+```html
+<ul>
+  <li *ngFor="let hobby of hobbies; let i = index">{{i + 1: }} {{hobby}}</li>
+</ul>
+```
+This will prefix each hobby with a number (the index + 1), so starting at 1
