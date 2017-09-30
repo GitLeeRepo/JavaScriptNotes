@@ -124,7 +124,7 @@ Angular uses TypeScript rather than JavaScript itself
     
     * app.component.html - the main HTML template file
     
- # Components
+ # Components (demonstrative)
  
  * To generate a component in the src/app/components folder (you need to create components if it doesn't exist)
  
@@ -134,6 +134,7 @@ Angular uses TypeScript rather than JavaScript itself
   
   * Your component initialiations should be placed in the ngOnInit() method within the UserComponent class just generated in the user.component.ts file (recommended over the constructor)
   
+  * Replace the default HTML in src/app-component.html with `<app-user></app-user>`.  app-user comes from the @Component directive selector: 'app-user' in the app/components/user/user.component.ts file.  Now the browser page shows the default "user works!" text from the user.component.html file. 
   
-  
+  * To create a display a property add a name property to the UserComponent class in app/component/user/user.component.ts, ex `name = 'Bill'` and display it through the app/component/user/user.component.html template using double curly brackets, ex `<h1>Hello {{name}}</h1>`
   
