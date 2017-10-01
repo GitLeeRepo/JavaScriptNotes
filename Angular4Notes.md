@@ -377,14 +377,23 @@ Note the DataService is both imported and included as a parameter to the constru
 * Now adding the following in the **DataService class** in **app/services/data/data.service.ts** should output to the browser console if the prior steps were followed
 
 ```typescript
+import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
+
 @Injectable()
 export class DataService {
 
   constructor() { 
     console.log("Data Serivce connected");
   }
+  
+  getPosts() {
+    return this.http.get('https://jsonplaceholder.typicode.com/posts').map(res=>res.json());
+  }
 }
 ```
+Note this example uses a custom getPosts() method to retrieve JSON data from a RESTful API.  Here it uses the .map() method from the `import 'rxjs/add/operator/map'` to handle the JSON data.  It also uses the Http modules which is one of the built in services to make the AJAX call (GET in this case).
 
 # Router
 
