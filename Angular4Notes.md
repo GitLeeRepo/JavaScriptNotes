@@ -2,6 +2,8 @@
 
 Notes on the Angular 4 JavaScript framework
 
+Note: The actual code written while creating these notes is in the [Angular4Demo01](https://github.com/GitLeeRepo/Angular4Demo01) repository
+
 # References
 
 * [Angular 4 in 60 Minutes](https://www.youtube.com/watch?v=KhzGSHNhnbI) YouTube video by Traversy Media.  Many of the notes here are from following along with this video.
