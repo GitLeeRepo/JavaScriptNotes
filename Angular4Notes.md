@@ -305,10 +305,31 @@ Angular has about 30 built in services, a few examples are:
 
 * $http
 
+Importing to app.module.ts and adding to **imports:** section of the @NgModule directive
+
+```typescript
+import { HttpModule } from '@angular/http';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    UserComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpModule
+  ],
+  providers: [DataService],
+  bootstrap: [AppComponent]
+})
+```
+
 * $location
 
-## Creating your own service
+Location service. No example at this time
 
+## Creating your own service
 
  * To generate a service in the src/app/services folder (you need to create the services folder if it doesn't exist)
  
@@ -351,7 +372,7 @@ export class UserComponent implements OnInit {
 ```
 Note the DataService is both imported and included as a parameter to the constructor for the UserComponent class
 
-* Now adding the following in **app/services/data/data.service.ts** will output to the browser console
+* Now adding the following in the **DataService class** in **app/services/data/data.service.ts** should output to the browser console if the prior steps were followed
 
 ```typescript
 @Injectable()
@@ -361,4 +382,60 @@ export class DataService {
     console.log("Data Serivce connected");
   }
 }
+```
+
+# Router
+
+Use the **router** to use different URLs for different components.
+
+## Create Routes to components
+
+* Create a 2nd component to use as an example
+
+```
+ng g component components/about
+```
+
+* Add Router/Routes to **app.module**
+
+```typescript
+import { RouterModule, Routes} from '@angular/router'
+
+const appRoutes:Routes = [
+  {path:'', component:UserComponent},
+  {path:'about', component:AboutComponent}
+]
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    UserComponent,
+    AboutComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    RouterModule.forRoot(appRoutes)
+  ],
+  providers: [DataService],
+  bootstrap: [AppComponent]
+})
+```
+Note the creation of the appRoutes constant which is used in the **imports:** section with the RouterModule, i.e. `RouterModule.forRoot(appRoutes)`
+
+* Add some about HTML content to **app/components/about/about.component.html**
+
+* Replace the `<app-user></app-user>` text with `<router-outlet></router-outlet>` in **app.module.html**
+
+* For the localhost:4200 you still see the UserComponent content, but if you select localhost:4200/about you see the AboutComponent content.
+
+* Adding routerLinks to the two components in **app.component.html**
+
+```html
+<ul>
+  <li><a routerLink="/">Home</a></li>
+  <li><a routerLink="about">About</a></li>
+</ul>
+<router-outlet></router-outlet>
 ```
