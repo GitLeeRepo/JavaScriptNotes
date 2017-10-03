@@ -381,31 +381,31 @@ Use the **router** to use different URLs for different components.
 
  * Add Router/Routes to **app.module**
 
-  ```typescript
-  import { RouterModule, Routes} from '@angular/router'
+   ```typescript
+   import { RouterModule, Routes} from '@angular/router'
 
-  const appRoutes:Routes = [
-    {path:'', component:UserComponent},
-    {path:'about', component:AboutComponent}
-  ]
+   const appRoutes:Routes = [
+     {path:'', component:UserComponent},
+     {path:'about', component:AboutComponent}
+   ]
 
-  @NgModule({
-    declarations: [
-      AppComponent,
-      UserComponent,
-      AboutComponent
-    ],
-    imports: [
-      BrowserModule,
-      FormsModule,
-      HttpModule,
-      RouterModule.forRoot(appRoutes)
-    ],
-    providers: [DataService],
-    bootstrap: [AppComponent]
-  })
-  ```
-  Note the creation of the appRoutes constant which is used in the **imports:** section with the RouterModule, i.e. `RouterModule.forRoot(appRoutes)`
+   @NgModule({
+     declarations: [
+       AppComponent,
+       UserComponent,
+       AboutComponent
+     ],
+     imports: [
+       BrowserModule,
+       FormsModule,
+       HttpModule,
+       RouterModule.forRoot(appRoutes)
+     ],
+     providers: [DataService],
+     bootstrap: [AppComponent]
+   })
+   ```
+   Note the creation of the appRoutes constant which is used in the **imports:** section with the RouterModule, i.e. `RouterModule.forRoot(appRoutes)`
 
 * Add some about HTML content to **app/components/about/about.component.html**
 * Replace the `<app-user></app-user>` text with `<router-outlet></router-outlet>` in **app.module.html**
