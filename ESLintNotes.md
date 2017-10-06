@@ -45,9 +45,7 @@ Apparently it is installed by default with VS 2017 and just needs to be enabled.
 * Navigate to **Text Editor/JavaScript-TypeScript/ESLint**
 * Set **Enabled** to True
 
-I found it was using the "C:\Users\UserName\.eslintrc file for its configuration.
-
-
+I found it was using the "C:\\Users\\UserName\\.eslintrc" (no .json extension) file for its configuration.  I tried adding a local .eslintrc.json file to the projects JavaScript folder and it caused ESLint to stop working (no errors, it just nolonger worked reporting obvious issue).  It may have to do with the default one using numbers for values instead of strings, the local .eslintrc.json files use string values, altough they accept the number eqivellent also (e.g. 0 for "off", 1 for "warn", 2 for "error").  I tried adding the string value syntax to the "C:\\Users\\UserName\\.eslintrc" version with the same result, ESLint stopped working.  I will investigate this further at a later time.
 
 # Issues
 
@@ -70,3 +68,7 @@ For web pages that call JavaScript functions in a separate .js file, the functio
    function myFunc() {
    ...
   ```
+
+## Issue with Visual Studio 2017 .eslintrc file
+
+Refer to the "Visual Studio 2017 IDE" section above for details
