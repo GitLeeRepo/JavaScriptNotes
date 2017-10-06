@@ -17,13 +17,13 @@ Run:
 npm install -g eslint
 ```
 
-To initialize and customize the .eslintrc file in a project folder run:
+To initialize and customize the .eslintrc.json file in a project folder run:
 
 ```
 eslint --init
 ```
 
-This will ask you questions on your coding style and environment, whether you are using Node.js and ES6 features for example.  This creates the .eslintrc file in your project root.  This file can be copied to other projects, in which case you don't need to run `eslint --init` for them.  You can also copy to a subfolder in your project if you want to apply different rules for different sets of code.
+This will ask you questions on your coding style and environment, whether you are using Node.js and ES6 features for example.  This creates the .eslintrc.json file in your project root.  This file can be copied to other projects, in which case you don't need to run `eslint --init` for them.  You can also copy to a subfolder in your project if you want to apply different rules for different sets of code.
 
 To run ESLint outside of an editor that is configured to use it, you can run it from the command line, for example:
 
