@@ -47,6 +47,49 @@ Apparently it is installed by default with VS 2017 and just needs to be enabled.
 
 I found it was using the "C:\\Users\\UserName\\.eslintrc" (no .json extension) file for its configuration.  I tried adding a local .eslintrc.json file to the projects JavaScript folder and it caused ESLint to stop working (no errors, it just nolonger worked reporting obvious issue).  It may have to do with the default one using numbers for values instead of strings, the local .eslintrc.json files use string values, altough they accept the number eqivellent also (e.g. 0 for "off", 1 for "warn", 2 for "error").  I tried adding the string value syntax to the "C:\\Users\\UserName\\.eslintrc" version with the same result, ESLint stopped working.  I will investigate this further at a later time.
 
+# .eslintrc.json file
+
+Contains the configuration settings for ESLint.  It is placed or generated in your projects folder.  Refer to the "Instalation" section for details on generating one. An existing one can also be compied from another project.
+
+Example .eslint.json file:
+
+```json
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true,
+        "jquery": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "sourceType": "module"
+    },
+    "rules": {
+        "indent": [
+            "warn",
+            4
+        ],
+        "linebreak-style": [
+            "error",
+            "windows"
+        ],
+        "quotes": [
+            "warn",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "no-console": "off",
+        "no-var": "warn",
+        "no-unused-vars": "warn",
+        "prefer-arrow-callback":"warn"
+    }
+}
+```
+
 # Issues
 
 ## Issue: ESLint flags global functions as unused-vars
