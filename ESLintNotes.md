@@ -1,6 +1,6 @@
 # Overview
 
-Notes on eslint
+Notes on ESlint for JavaScript (including Node.js, React, JQuery, etc)
 
 # References
 
@@ -8,11 +8,38 @@ Notes on eslint
 
 # Installation
 
+The ESLint installation uses **NPM** (Node Package Module) therefore, Node.js must be installed.  The notes here are for setting it up globally, it can also be installed per project if desired.
 
+Note: Since ESLint is installed globally here, any subsequent installation of ESLint related plugins should also be installed globally in order for them to work properly.
+
+Run:
+```
+npm install -g eslint
+```
+
+To initialize and customize the .eslintrc file in a project folder run:
+
+```
+eslint --init
+```
+
+This will ask you questions on your coding style and environment, whether you are using Node.js and ES6 features for example.  This creates the .eslintrc file in your project root.  This file can be copied to other projects, in which case you don't need to run `eslint --init` for them.  You can also copy to a subfolder in your project if you want to apply different rules for different sets of code.
+
+To run ESLint outside of an editor that is configured to use it, you can run it from the command line, for example:
+
+```
+eslint myCode.js
+```
+
+# Editor/IDE Usage
+
+## Visual Studio Code
+
+## Visual Studio 2017 IDE
 
 # Issues
 
-## Eslint flags global functions as unused
+## Issue: ESLint flags global functions as unused-vars
 
 For web pages that call JavaScript functions in a separate .js file, the functions in that .js file will be flagged as unused if you have warn or error defined for the **no-unused-vars** rule.  This is unfortunate because this rule is desireable in general for variables (function names are treated as variable in JavaScript), but not for these functions it doesn't make sense in this environment. Exported functions will not trigger this, but this is more of a server side (Node.js) technique and not done for client side web page scripting.  Below is the only reasonable way I have found so far to deal with this, but I rather not have to add this clutter to the code, and more importantly it may miss arguements that are unused that you want to identify.
 
