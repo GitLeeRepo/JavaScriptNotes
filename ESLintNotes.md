@@ -35,7 +35,19 @@ eslint myCode.js
 
 ## Visual Studio Code
 
+ESLint is available in VS Code through an extension.  My extension was installed when I clicked on "JavaScript" under "Customize" on the Welcome page (at least I don't think it was there before).  It gave me errors saying ESLint needed to be installed, in which case I ran the NPM install as outlined above.  It continued to warn me about other related plugins that it needed, which I also installed globally with NPM.  Unfortunately, I did not take detailed notes at the time to note which additional modules it needed (it was two or three).  Once completed, it has run without issue since then, integrating well with VS Code.
+
 ## Visual Studio 2017 IDE
+
+Apparently it is installed by default with VS 2017 and just needs to be enabled.  Mine had it, so not sure if it was installed with JavaScript related install options or not (such as Node.js).  I enabled it by doing the following
+
+* Open the **Tools** menu and select **Options**
+* Navigate to **Text Editor/JavaScript-TypeScript/ESLint**
+* Set **Enabled** to True
+
+I found it was using the "C:\Users\UserName\.eslintrc file for its configuration.
+
+
 
 # Issues
 
