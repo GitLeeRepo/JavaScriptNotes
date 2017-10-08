@@ -178,8 +178,36 @@ Using a string literal above but more typical a string variabe, possibly from a 
 
 ### Partial list of the methods
 
-* **regexp.exec(string)** - invoke to return a match within the string parameter based on the regexp regular expression.  It returns an array containing the results, or null if nothing found.  Element zero of the returned result is the matched text itself, while 1 thru n is the captured substrings if the regEx search includes groups.  The array also contains the "index" for the beginning location of where the match was foun.  If the global flag was set it will also iclude a .lastIndex property value where the next invokation of exec() will start when running it in a loop.
+* **RegExp.exec(string)** - invoke to return a match within the string parameter based on the regexp regular expression.  It returns an array containing the results, or null if nothing found.  Element zero of the returned result is the matched text itself, while 1 thru n is the captured substrings if the regEx search includes groups.  The array also contains the "index" for the beginning location of where the match was foun.  If the global flag was set it will also iclude a .lastIndex property value where the next invokation of exec() will start when running it in a loop.
 
+  Example loop with exec() - You would use this if your expression includes a global (multi match) flag
+  
+  ```javascript
+  while ( (match = regex.exec(targetText)) !== null) {
+    // match[0] contains the match itself
+    // here storing a list of the matches
+    matches.push(match[0]); 
+
+    ...
+
+    // if there are any capture groups in the expression this will display each one
+    for (let i = 1; i < match.length; i++) {
+        if (match[i] !== undefined & match[i] !== '') {
+            output += `<li>element ${i}: ${match[i]}</li>`;                       
+        }  
+    }
+    output += '</ul>';
+
+    //console.log(match);
+    if (matchCount++ > matchLimit) {
+        break;
+    }
+  } 
+  ```
+  
+* **RegExp.source** - contains the text version of the regular expression without the **/** delimiters and flags.  Useful when concatenating multiple component pieces of the expression.
+  
+* **RegExp.lastIndex** - when searching for multipe potential matches (with the "g" global flag) this will indicate where the next iteration of **RegExp.exec()** should start (in effect the end of the prior match + 1)
 
 ## Converting text from the DOM into a RegExp object
 
