@@ -164,16 +164,17 @@ A regular expression can be assigned directly to a variable, with that variable 
 let regEx = /exp/g
 ```
 
-It can also be created with **new** using the RegExp constructor.
+It can also be created with **new** using the RegExp constructor.  The second parameter is optional and provides flags ("g" = global, "m" = multiline, "i" = ignore case)
 ```javascript
-new RegExp(/exp/, 'gm');
+let regEx = new RegExp(/exp/, 'gm');
 ```
 This method is useful when you want to combine multiple components (strings and other regular expressions).  For example,
 
 ```javascript
 let wBound = /\b/;
-let reg = new RegExp(wBound.source + '^Test(ing|er|ed)' + wBound.source, 'gm');
+let regEx = new RegExp(wBound.source + '^Test(ing|er|ed)$' + wBound.source, 'gm');
 ```
+Using a string literal above but more typical a string variabe, possibly from a web form.  Note the use of the **.source** property.  Without this it would not work correctly because the concatentated expression would double up the **/** delimiters.
 
 ### Partial list of the methods
 
