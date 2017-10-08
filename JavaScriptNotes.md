@@ -21,7 +21,7 @@ JavaScript notes, particularly as it applies to browsers
 
 # Functions
 
-Functions in JavaScript in a lot of ways behave like functions in other languages, but they do have some fairly unique characteristics such as function expressions (both named and unnamed), function constructors for creating objects, and self-infoking functions
+Functions in JavaScript in a lot of ways behave like functions in other languages, but they do have some fairly unique characteristics such as function expressions (both named and unnamed), function constructors for creating objects, and self-infoking functions.  Part of the unique nature of JavaScript functions is the fact that they are actually objects and can be treated like other objects (they have methods, properties, etc and can be assigned to other objects and avaibles)
 
 ## Standard functions
 
@@ -103,6 +103,10 @@ let person2 = new person('Sally', 'Rally');
 console.log(person1.fullName());
 console.log(person1.fullName());
 ```
+
+# Event Handling
+
+TODO: Fill in this section
 
 # Tips and Tricks
 
