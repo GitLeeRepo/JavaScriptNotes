@@ -27,10 +27,22 @@ Functions in JavaScript in a lot of ways behave like functions in other language
 
 ```javascript
 let func = function (str) {
-    console.log('Hello ' + str);
+    console.log('Hello, ' + str);
 };
 
-func('there world');
+func('world');
+```
+Note the function variable (func in this case) can also be passed to other functions as parameters.
+
+## Inline function expressions
+
+The inline unnammed function `(item, pos)=>{` is using ES6 arrow function syntax, ES5 function(item, pos) {` syntax is also available
+
+```javascript
+// Get rid of duplicate entries in matches array
+let uniqueMatches = matches.filter((item, pos)=>{
+    return matches.indexOf(item)== pos; 
+});
 ```
 
 ## Object methods (using function expressions)
