@@ -178,7 +178,8 @@ Using a string literal above but more typical a string variabe, possibly from a 
 
 ### Partial list of the methods
 
-* exec() - invoke to return a match based on the provided regular expression.
+* **regexp.exec(string)** - invoke to return a match within the string parameter based on the regexp regular expression.  It returns an array containing the results, or null if nothing found.  Element zero of the returned result is the matched text itself, while 1 thru n is the captured substrings if the regEx search includes groups.  The array also contains the "index" for the beginning location of where the match was foun.  If the global flag was set it will also iclude a .lastIndex property value where the next invokation of exec() will start when running it in a loop.
+
 
 ## Converting text from the DOM into a RegExp object
 
