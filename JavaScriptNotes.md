@@ -19,6 +19,53 @@ JavaScript notes, particularly as it applies to browsers
     * Promises and Asynchronous data    
     * Arrow functions   
 
+# Tips and Tricks
+
+## Stopping a form from triggerin a submit action
+
+When a form is submitted it it reloads the entire page, which is often not desired, particularly when calling scripts that only update a portion of the page (violates the AJAX intent for example), or you don't want your initial on load code to be re-executed.
+
+* Simple solution (return false to onSubmit)
+
+```html
+   <form class="dialog" onsubmit="return false">
+     
+      ...
+      <input id="submit" type="submit" onclick="doSomething()" value="Submit">
+   </form>
+```
+
+* Have your code decide whether to submit or not (true = yes submit, false means don't)
+
+```html
+   <form class="dialog" onsubmit="return doSomething()">
+     
+      ...
+      <input id="submit" type="submit" value="Submit">
+   </form>
+```
+
+* Have your code cancel the submit event
+
+```javascript
+let form = document.getElementById("FormID");
+
+ form.addEventListener("submit", (e) => {
+      if ("Your Desired Conditions.") {
+          e.preventDefault();
+      }
+ });
+```
+
+* Canceling the submit event with JQuery
+
+```javascript
+$('#formId').submit(function (evt) {
+    evt.preventDefault();
+    window.history.back();
+});
+```
+
 # Chrome Tools and JavaScript Examples
 
 Note: most of the notes in this section are from the [LearnWebCode](https://www.youtube.com/watch?v=zPHerhks2Vg&t=302s) YouTube video.
