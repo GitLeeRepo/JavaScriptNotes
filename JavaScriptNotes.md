@@ -176,9 +176,9 @@ let regEx = new RegExp(wBound.source + '^Test(ing|er|ed)$' + wBound.source, 'gm'
 ```
 Using a string literal above but more typical a string variabe, possibly from a web form.  Note the use of the **.source** property.  Without this it would not work correctly because the concatentated expression would double up the **/** delimiters.
 
-### Partial list of the methods
+### List of RegExp properties and methods
 
-* **RegExp.exec(string)** - invoke to return a match within the string parameter based on the regexp regular expression.  It returns an array containing the results, or null if nothing found.  Element zero of the returned result is the matched text itself, while 1 thru n is the captured substrings if the regEx search includes groups.  The array also contains the "index" for the beginning location of where the match was foun.  If the global flag was set it will also iclude a .lastIndex property value where the next invokation of exec() will start when running it in a loop.
+* **RegExp.exec(string)** - invoke to return a match within the string parameter based on the regexp regular expression.  It returns an array containing the results, or null if nothing found.  Element zero of the returned result is the matched text itself, while 1 thru n is the captured substrings if the regEx search includes groups.  The array also contains the "index" for the beginning location of where the match was foun.  If the global flag was set it will also iclude a .lastIndex property value where the next invokation of exec() will start when running it in a loop.  When the global flag is not set then exec() behaves like str.match().
 
   Example loop with exec() - You would use this if your expression includes a global (multi match) flag
   
@@ -205,9 +205,15 @@ Using a string literal above but more typical a string variabe, possibly from a 
   } 
   ```
   
-* **RegExp.source** - contains the text version of the regular expression without the **/** delimiters and flags.  Useful when concatenating multiple component pieces of the expression.
-  
-* **RegExp.lastIndex** - when searching for multipe potential matches (with the "g" global flag) this will indicate where the next iteration of **RegExp.exec()** should start (in effect the end of the prior match + 1)
+* **RegExp.source** - this property contains the text version of the regular expression without the **/** delimiters and flags.  Useful when concatenating multiple component pieces of the expression.  
+* **RegExp.lastIndex** - when searching for multipe potential matches (with the "g" global flag) this will indicate where the next iteration of **RegExp.exec()** should start (in effect the end of the prior match + 1).  If you start searching a new string before the matches on the prior string are completed, then you need to set this property to zero to start over.  This is not necessary if the exec() loop completes (thus being set to null on its last iteration.
+* **RegExp.global** - readonly prepertywhich is true if the global flag is set
+* **RegExp.multiline** - readonly properth which is true if multiline flag set
+* **RegExp.ignoreCase** - readonly property which is true if ignore case flag is set
+* **RegExp.test(str)** - tests to see if the RegExp finds a match in str, if it does it returns true
+* **RegExp.toString()** - convert the RegExp to a string
+
+In addition to these RegExp properties and methods, you can use the **String.match(RegExp)** form.  This is similar to **RegExp.exec(str)** when the global flag is NOT set, otherwise use the exec() method instead.
 
 ## Converting text from the DOM into a RegExp object
 
