@@ -21,7 +21,7 @@ JavaScript notes, particularly as it applies to browsers
 
 # Functions
 
-Functions in JavaScript in a lot of ways behave like functions in other languages, but they do have some fairly unique characteristics such as function expressions (both named and unnamed)
+Functions in JavaScript in a lot of ways behave like functions in other languages, but they do have some fairly unique characteristics such as function expressions (both named and unnamed), function constructors for creating objects, and self-infoking functions
 
 ## Standard functions
 
@@ -84,9 +84,29 @@ console.log('fullName: ' + person.fullName());
 ```
 Note that the same principle and basic technique applies to other object types, not just object literals
 
+## Function Constructors
+
+You can create objects using what is referred to as function constructors
+
+```javascript
+function person(first, last) {
+    this.firstName = first;
+    this.lastName = last;
+    this.fullName = () => {
+        return this.firstName + ' ' + this.lastName;
+    };
+}
+
+let person1 = new person('John', 'Doe');
+let person2 = new person('Sally', 'Rally');
+
+console.log(person1.fullName());
+console.log(person1.fullName());
+```
+
 # Tips and Tricks
 
-## Stopping a form from triggerin a submit action
+## Stopping a form from triggering a submit action
 
 When a form is submitted it it reloads the entire page, which is often not desired, particularly when calling scripts that only update a portion of the page (violates the AJAX intent for example), or you don't want your initial on load code to be re-executed.
 
