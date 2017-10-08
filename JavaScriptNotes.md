@@ -23,6 +23,16 @@ JavaScript notes, particularly as it applies to browsers
 
 Functions in JavaScript in a lot of ways behave like functions in other languages, but they do have some fairly unique characteristics such as function expressions (both named and unnamed)
 
+## Standard functions
+
+```javascript
+function sum(x, y) {
+  return x + y;
+}
+
+let total = sum(200, 550);
+```
+
 ## Function expressions
 
 ```javascript
@@ -44,6 +54,17 @@ let uniqueMatches = matches.filter((item, pos)=>{
     return matches.indexOf(item)== pos; 
 });
 ```
+
+## Self-invoking function expressions
+
+The following function will be invoked when the JavaScript file is loaded by the HTML page:
+
+```javascript
+(function () {
+    console.log('Script loaded');
+})();
+```
+Note the open parenthis at the end is what makes this anonymous function expression self-invoking
 
 ## Object methods (using function expressions)
 
