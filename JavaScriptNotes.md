@@ -50,16 +50,16 @@ let uniqueMatches = matches.filter((item, pos)=>{
 Uses ES6 arrow function syntax here, but the ES5 `fullname: function() {` syntax works as well.
 
 ```javascript
-   // define object literal 
-   let person = {
-     firstName: 'Billy',
-     lastName: 'McGilly',
-     fullName: () => {
-         return this.firstName + ' ' + this.lastName;
-     }
+// define object literal 
+let person = {
+  firstName: 'Billy',
+  lastName: 'McGilly',
+  fullName: () => {
+      return this.firstName + ' ' + this.lastName;
+  }
 
-   // call the object literal's method fullName()
-   console.log('fullName: ' + person.fullName());
+// call the object literal's method fullName()
+console.log('fullName: ' + person.fullName());
 ```
 Note that the same principle and basic technique applies to other object types, not just object literals
 
@@ -72,21 +72,21 @@ When a form is submitted it it reloads the entire page, which is often not desir
 * Simple solution (return false to onSubmit)
 
 ```html
-   <form class="dialog" onsubmit="return false">
-     
-      ...
-      <input id="submit" type="submit" onclick="doSomething()" value="Submit">
-   </form>
+<form class="dialog" onsubmit="return false">
+
+  ...
+  <input id="submit" type="submit" onclick="doSomething()" value="Submit">
+</form>
 ```
 
 * Have your code decide whether to submit or not (true = yes submit, false means don't)
 
 ```html
-   <form class="dialog" onsubmit="return doSomething()">
-     
-      ...
-      <input id="submit" type="submit" value="Submit">
-   </form>
+ <form class="dialog" onsubmit="return doSomething()">
+
+    ...
+    <input id="submit" type="submit" value="Submit">
+ </form>
 ```
 
 * Have your code cancel the submit event
