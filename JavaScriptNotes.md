@@ -151,6 +151,41 @@ $('#formId').submit(function (evt) {
 });
 ```
 
+# Regular Expressions
+
+## RegExp
+
+RegExp is a regular expression object with methods and properties to detail with regular expressions
+
+### Creating a RegExp object
+
+A regular expression can be assigned directly to a variable, with that variable becoming of type RegExp
+```javascript
+let regEx = /exp/g
+```
+
+It can also be created with **new** using the RegExp constructor.
+```javascript
+new RegExp(/exp/, 'gm');
+```
+This method is useful when you want to combine multiple components (strings and other regular expressions).  For example,
+
+```javascript
+let wBound = /\b/;
+let reg = new RegExp(wBound.source + '^Test(ing|er|ed)' + wBound.source, 'gm');
+```
+
+### Partial list of the methods
+
+* exec() - invoke to return a match based on the provided regular expression.
+
+## Converting text from the DOM into a RegExp object
+
+```javascript
+let targetText = document.getElementById('data').value;
+let regex = new RegExp(document.getElementById('regex').value, 'gm');
+```
+
 # Chrome Tools and JavaScript Examples
 
 Note: most of the notes in this section are from the [LearnWebCode](https://www.youtube.com/watch?v=zPHerhks2Vg&t=302s) YouTube video.
