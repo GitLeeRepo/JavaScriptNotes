@@ -28,6 +28,8 @@ JavaScript is not a strongly typed language in that you do not declare the type 
 * **boolean** - binary (only two possible values) true/false, yes/no, on/off.  true/false are predefined and used to set and evaluate booleans.
 * **object** - everything else is an Object.  JavaScript does include predefined objects such as **Date** (including Time) that include constucts for initializing and predefined methods and properties for working with them.  Another example would be the **RegExp** object for dealing with regular expressions.
 
+Primitive types (number, string, and boolean) are value types and immutable, while objects are reference types and mutable
+
 ## Global Object
 
 The global object contains the global defined properties and symbols available to all of the JavaScript program.  At the top most level, outside of all functions **this** will refer to the global object.  In the client side environment of the browser the **Windows** object will function as the global object.
@@ -39,6 +41,19 @@ The Global Object contains:
 * Constructor functions for Date(), RegExp(), String(), Object(), Array()
 * Global Objects like Math and JSON.
 * Any global variables declared in the global scope will be stored here
+
+## Wrapper Objects
+
+Strings, numbers and booleans are primitive types and not objects.  However, they do have objects they are associated with String(), Number(), and Boolean() that they can be temporarily assigned to when access so that they can gain access to methods and properties to operate on these types.  This is all transparent and behind the scenes.  When the temporary object is nolonger needed it is discarded.
+
+## Type conversion
+
+Type conversion happen dynamically depending on the context and don't normally require explicit cast/convert type operations
+
+* "I'm string number " + 5 - 5 i converted to a string "5" and concatenated to "I'm string number 5"
+* 5 + "10" - "10" is converted to the number 10 and added for a result of 15.
+
+If an explicit conversion is needed for some reason it can be done with each primitives wrapper object function String(3) = "3", Boolean(0) = false, and Number("5") = 5.
 
 # Functions
 
