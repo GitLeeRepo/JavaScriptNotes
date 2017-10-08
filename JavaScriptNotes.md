@@ -55,6 +55,12 @@ Type conversion happen dynamically depending on the context and don't normally r
 
 If an explicit conversion is needed for some reason it can be done with each primitives wrapper object function String(3) = "3", Boolean(0) = false, and Number("5") = 5.
 
+## Variable Scope
+
+Variables declared outside of all functions are global in scope.  Those variables defined within a function are local to that function, this includes any parameters passed into the function.  With ES5, which used **var** to declare variables there is no further distinction of scope within other blocks such as loops and conditionals, although the scope will be local within nested functions, and these nested functions have access to the variables declared in the function they are nested in.  With ES6, using **let** to declare a variable does allow the scope to be further limited to block of code it is declared in.
+
+**Hoisting** - a variable declared within the local function scope does not have to appear before where it is used, it is considered "hoisted" to the top of the function where it will be available regardless of its position.
+
 # Functions
 
 Functions in JavaScript in a lot of ways behave like functions in other languages, but they do have some fairly unique characteristics such as function expressions (both named and unnamed), function constructors for creating objects, and self-infoking functions.  Part of the unique nature of JavaScript functions is the fact that they are actually objects and can be treated like other objects (they have methods, properties, etc and can be assigned to other objects and avaibles)
