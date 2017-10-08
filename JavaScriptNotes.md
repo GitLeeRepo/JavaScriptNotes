@@ -19,6 +19,27 @@ JavaScript notes, particularly as it applies to browsers
     * Promises and Asynchronous data    
     * Arrow functions   
 
+# Data Types
+
+JavaScript is not a strongly typed language in that you do not declare the type when the variable is created.  Its type is determined by what it is assigned an how it is used.  It contains three primative types: number, string, and boolean, with everything else being an object.
+
+* **number** - there is no distinction between real and integer type variables.  All numbers are represented by 64 bit floating point numbers.  It does allow integers to be stored with precision between -2^53 abd 2^54.
+* **strings** - strings in JavaScript are immutable, meaning they can't be changed, you can only create a new modified version of the string.  So JavaScript functions such as replace() do not change the original string, but instead must be assigned to a new string.
+* **boolean** - binary (only two possible values) true/false, yes/no, on/off.  true/false are predefined and used to set and evaluate booleans.
+* **object** - everything else is an Object.  JavaScript does include predefined objects such as **Date** (including Time) that include constucts for initializing and predefined methods and properties for working with them.  Another example would be the **RegExp** object for dealing with regular expressions.
+
+## Global Object
+
+The global object contains the global defined properties and symbols available to all of the JavaScript program.  At the top most level, outside of all functions **this** will refer to the global object.  In the client side environment of the browser the **Windows** object will function as the global object.
+
+The Global Object contains:
+
+* Properties like undefined, NaN and Infinity
+* Global functions like isNan(), parseInt(), and eval()
+* Constructor functions for Date(), RegExp(), String(), Object(), Array()
+* Global Objects like Math and JSON.
+* Any global variables declared in the global scope will be stored here
+
 # Functions
 
 Functions in JavaScript in a lot of ways behave like functions in other languages, but they do have some fairly unique characteristics such as function expressions (both named and unnamed), function constructors for creating objects, and self-infoking functions.  Part of the unique nature of JavaScript functions is the fact that they are actually objects and can be treated like other objects (they have methods, properties, etc and can be assigned to other objects and avaibles)
