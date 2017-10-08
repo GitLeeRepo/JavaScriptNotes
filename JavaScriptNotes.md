@@ -19,6 +19,38 @@ JavaScript notes, particularly as it applies to browsers
     * Promises and Asynchronous data    
     * Arrow functions   
 
+# Functions
+
+Functions in JavaScript in a lot of ways behave like functions in other languages, but they do have some fairly unique characteristics such as function expressions (both named and unnamed)
+
+## Function expressions
+
+```javascript
+let func = function (str) {
+    console.log('Hello ' + str);
+};
+
+func('there world');
+```
+
+## Object methods (using function expressions)
+
+Uses ES6 arrow function syntax here, but the ES5 `fullname: function() {` syntax works as well.
+
+```javascript
+   // define object literal 
+   let person = {
+     firstName: 'Billy',
+     lastName: 'McGilly',
+     fullName: () => {
+         return this.firstName + ' ' + this.lastName;
+     }
+
+   // call the object literal's method fullName()
+   console.log('fullName: ' + person.fullName());
+```
+Note that the same principle and basic technique applies to other object types, not just object literals
+
 # Tips and Tricks
 
 ## Stopping a form from triggerin a submit action
