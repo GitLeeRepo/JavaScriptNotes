@@ -21,12 +21,12 @@ JavaScript notes, particularly as it applies to browsers
 
 # Data Types
 
-JavaScript is not a strongly typed language in that you do not declare the type when the variable is created.  Its type is determined by what it is assigned an how it is used.  It contains three primative types: number, string, and boolean, with everything else being an object.
+JavaScript is not a strongly typed language in that you do not declare the type when the variable is created.  Its type is determined by what it is assigned an how it is used.  It contains three primitive types: number, string, and boolean, with everything else being an object.
 
 * **number** - there is no distinction between real and integer type variables.  All numbers are represented by 64 bit floating point numbers.  It does allow integers to be stored with precision between -2^53 abd 2^54.
 * **strings** - strings in JavaScript are immutable, meaning they can't be changed, you can only create a new modified version of the string.  So JavaScript functions such as replace() do not change the original string, but instead must be assigned to a new string.
 * **boolean** - binary (only two possible values) true/false, yes/no, on/off.  true/false are predefined and used to set and evaluate booleans.
-* **object** - everything else is an Object.  JavaScript does include predefined objects such as **Date** (including Time) that include constucts for initializing and predefined methods and properties for working with them.  Another example would be the **RegExp** object for dealing with regular expressions.
+* **object** - everything else is an Object.  JavaScript does include predefined objects such as **Date** (including Time) that include constructs for initializing and predefined methods and properties for working with them.  Another example would be the **RegExp** object for dealing with regular expressions.
 
 Primitive types (number, string, and boolean) are value types and immutable, while objects are reference types and mutable
 
@@ -44,7 +44,7 @@ The Global Object contains:
 
 ## Wrapper Objects
 
-Strings, numbers and booleans are primitive types and not objects.  However, they do have objects they are associated with String(), Number(), and Boolean() that they can be temporarily assigned to when access so that they can gain access to methods and properties to operate on these types.  This is all transparent and behind the scenes.  When the temporary object is nolonger needed it is discarded.
+Strings, numbers and booleans are primitive types and not objects.  However, they do have objects they are associated with String(), Number(), and Boolean() that they can be temporarily assigned to when access so that they can gain access to methods and properties to operate on these types.  This is all transparent and behind the scenes.  When the temporary object is no longer needed it is discarded.
 
 ## Type conversion
 
@@ -63,7 +63,7 @@ Variables declared outside of all functions are global in scope.  Those variable
 
 # Functions
 
-Functions in JavaScript in a lot of ways behave like functions in other languages, but they do have some fairly unique characteristics such as function expressions (both named and unnamed), function constructors for creating objects, and self-infoking functions.  Part of the unique nature of JavaScript functions is the fact that they are actually objects and can be treated like other objects (they have methods, properties, etc and can be assigned to other objects and avaibles)
+Functions in JavaScript in a lot of ways behave like functions in other languages, but they do have some fairly unique characteristics such as function expressions (both named and unnamed), function constructors for creating objects, and self-invoking functions.  Part of the unique nature of JavaScript functions is the fact that they are actually objects and can be treated like other objects (they have methods, properties, etc and can be assigned to other objects and available)
 
 ## Standard functions
 
@@ -188,9 +188,9 @@ let form = document.getElementById("FormID");
  });
 ```
 
-* Canceling the submit event with JQuery
+* Canceling the submit event with jQuery
 
-```javascript
+```JavaScript
 $('#formId').submit(function (evt) {
     evt.preventDefault();
     window.history.back();
@@ -210,7 +210,7 @@ A regular expression can be assigned directly to a variable, with that variable 
 let regEx = /exp/g
 ```
 
-It can also be created with **new** using the RegExp constructor.  The second parameter is optional and provides flags ("g" = global, "m" = multiline, "i" = ignore case)
+It can also be created with **new** using the RegExp constructor.  The second parameter is optional and provides flags ("g" = global, "m" = multi-line, "i" = ignore case)
 ```javascript
 let regEx = new RegExp(/exp/, 'gm');
 ```
@@ -220,11 +220,11 @@ This method is useful when you want to combine multiple components (strings and 
 let wBound = /\b/;
 let regEx = new RegExp(wBound.source + '^Test(ing|er|ed)$' + wBound.source, 'gm');
 ```
-Using a string literal above but more typical a string variabe, possibly from a web form.  Note the use of the **.source** property.  Without this it would not work correctly because the concatentated expression would double up the **/** delimiters.
+Using a string literal above but more typical a string variable, possibly from a web form.  Note the use of the **.source** property.  Without this it would not work correctly because the concatenates expression would double up the **/** delimiters.
 
 ### List of RegExp properties and methods
 
-* **RegExp.exec(string)** - invoke to return a match within the string parameter based on the regexp regular expression.  It returns an array containing the results, or null if nothing found.  Element zero of the returned result is the matched text itself, while 1 thru n is the captured substrings if the regEx search includes groups.  The array also contains the "index" for the beginning location of where the match was foun.  If the global flag was set it will also iclude a .lastIndex property value where the next invokation of exec() will start when running it in a loop.  When the global flag is not set then exec() behaves like str.match().
+* **RegExp.exec(string)** - invoke to return a match within the string parameter based on the regexp regular expression.  It returns an array containing the results, or null if nothing found.  Element zero of the returned result is the matched text itself, while 1 thru n is the captured substrings if the RegEx search includes groups.  The array also contains the "index" for the beginning location of where the match was found.  If the global flag was set it will also include a .lastIndex property value where the next invocation of exec() will start when running it in a loop.  When the global flag is not set then exec() behaves like str.match().
 
   Example loop with exec() - You would use this if your expression includes a global (multi match) flag
   
@@ -252,9 +252,9 @@ Using a string literal above but more typical a string variabe, possibly from a 
   ```
   
 * **RegExp.source** - this property contains the text version of the regular expression without the **/** delimiters and flags.  Useful when concatenating multiple component pieces of the expression.  
-* **RegExp.lastIndex** - when searching for multipe potential matches (with the "g" global flag) this will indicate where the next iteration of **RegExp.exec()** should start (in effect the end of the prior match + 1).  If you start searching a new string before the matches on the prior string are completed, then you need to set this property to zero to start over.  This is not necessary if the exec() loop completes (thus being set to null on its last iteration.
-* **RegExp.global** - readonly prepertywhich is true if the global flag is set
-* **RegExp.multiline** - readonly properth which is true if multiline flag set
+* **RegExp.lastIndex** - when searching for multiple potential matches (with the "g" global flag) this will indicate where the next iteration of **RegExp.exec()** should start (in effect the end of the prior match + 1).  If you start searching a new string before the matches on the prior string are completed, then you need to set this property to zero to start over.  This is not necessary if the exec() loop completes (thus being set to null on its last iteration.
+* **RegExp.global** - readonly property which is true if the global flag is set
+* **RegExp.multiline** - readonly property which is true if multi-line flag set
 * **RegExp.ignoreCase** - readonly property which is true if ignore case flag is set
 * **RegExp.test(str)** - tests to see if the RegExp finds a match in str, if it does it returns true
 * **RegExp.toString()** - convert the RegExp to a string
@@ -279,12 +279,12 @@ The **Chrome Developer** Tools (right-click the page then select Inspect)is usef
    ```
    window
    ```
-   Displays the Window object with a navigatable tree of its subcomponents.
+   Displays the Window object with a navigable tree of its subcomponents.
 
    ```
    document
    ```
-   Displays the document object with a navigatable tree of its subcomponents.
+   Displays the document object with a navigable tree of its subcomponents.
 
    ```
    document.title

@@ -5,7 +5,7 @@ Notes on the JSON data exchange format
 # References
 
 * [W3 Schools](https://www.w3schools.com/js/js_json_intro.asp) - JSON Tutorial and Reference
-* [JSON Crash Course](https://www.youtube.com/watch?v=wI1CWzNtE-M) - YouTube video by Traversey Media.  Many of the notes here come from this video.
+* [JSON Crash Course](https://www.youtube.com/watch?v=wI1CWzNtE-M) - YouTube video by Traversy Media.  Many of the notes here come from this video.
 
 # JSON Key Ideas
 
@@ -17,7 +17,7 @@ Notes on the JSON data exchange format
 
 # JSON Data Types
 
-* Number - No destinction between float and integer. No quotes used
+* Number - No distinction between float and integer. No quotes used
 * String - Series of Unicode characters.  Must be in double quotes
 * Boolean - True and False
 * Arrays - Ordered List of items (strings, numbers, other arrays, objects) contained in square brackets

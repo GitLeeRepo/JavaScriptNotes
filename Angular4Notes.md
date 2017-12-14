@@ -17,14 +17,14 @@ Note: The actual code written while creating these notes is in the [Angular4Demo
 # What Angular is NOT
 
 * Not a server-side platform
-* Not a JavaScript libarary (jQuery, React, etc)
+* Not a JavaScript library (jQuery, React, etc)
 * Not a design pattern like MVC
 * Not a platform or language (.NET, Java)
 
 # Why use Angular over plain JavaScript?
 
 * Rapid Development & Code Generation with the Angular CLI
-* Code Organization & Productivity (encapsolated components)
+* Code Organization & Productivity (encapsulated components)
 * Dynamic Content - use code directly in HTML using directives
 
 # Core features and common terms
@@ -80,7 +80,7 @@ Angular uses TypeScript rather than JavaScript itself
 	ng serve
 	```
 
-* Load the intial app in the browsers at `localhost:4200` to verify installation
+* Load the initial app in the browsers at `localhost:4200` to verify installation
 
 # Structure of the Angular App
 
@@ -88,7 +88,7 @@ Angular uses TypeScript rather than JavaScript itself
  * Has `ng serve` for starting the app 
  * Has `ng build` for compiling the apps static assets 
 * angular-cli.json - configurations specific to the Angular CLI
-  * Contains ouput directories  
+  * Contains output directories  
   * Style sheets  
   * Script file mappings  
 * node_modules - your modules in the dependencies  
@@ -107,7 +107,7 @@ Angular uses TypeScript rather than JavaScript itself
    ```
  
   Generates (the "g" option above) a component named user in src/app/components with its starter TypeScript and HTML files.  It also updates the app.module.ts file adding the new component.  
-* Your component initialiations should be placed in the ngOnInit() method within the UserComponent class just generated in the user.component.ts file (recommended over the constructor)  
+* Your component initialisations should be placed in the ngOnInit() method within the UserComponent class just generated in the user.component.ts file (recommended over the constructor)  
 * Replace the default HTML in src/app-component.html with `<app-user></app-user>`.  app-user comes from the @Component directive selector: 'app-user' in the app/components/user/user.component.ts file.  Now the browser page shows the default "user works!" text from the user.component.html file.   
 * To create a display a property add a name property to the UserComponent class in app/component/user/user.component.ts, ex `name = 'Bill'` and display it through the app/component/user/user.component.html template using double curly brackets, ex `<h1>Hello {{name}}</h1>`
 
@@ -172,7 +172,7 @@ Allows the looping through arrays within the HTML itself
     </div>
   </form>
   ```
- Note the `#hobby` tag on the input iss used in the event signature `addHobby(hobby.value)`
+ Note the `#hobby` tag on the input ISS used in the event signature `addHobby(hobby.value)`
 
 * In the user.component.ts
 
@@ -257,7 +257,7 @@ Binds data in the HTML template to the component, with changes being reflected i
     ...
   </form>
   ```
-  Now whenever the name on the form is changed the component propery "name" will also be updated and displayed wherever it is used.  Note this is dynamic as you type each letter, it does not require a form submit.  Note the `[(ngModel)]="name"` syntax for establishing the two way binding.  Also note the name attribute is also set
+  Now whenever the name on the form is changed the component property "name" will also be updated and displayed wherever it is used.  Note this is dynamic as you type each letter, it does not require a form submit.  Note the `[(ngModel)]="name"` syntax for establishing the two way binding.  Also note the name attribute is also set
 
   Note that because "city" is part of the address object it must be fully qualified as "address.city" in the Angular two way bind (`[(ngModel)]`), but not in the HTML name attribute
 
