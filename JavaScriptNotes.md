@@ -23,9 +23,9 @@ JavaScript notes, particularly as it applies to browsers
 
 JavaScript is not a strongly typed language in that you do not declare the type when the variable is created.  Its type is determined by what it is assigned an how it is used.  It contains three primitive types: number, string, and boolean, with everything else being an object.
 
-* **number** - there is no distinction between real and integer type variables.  All numbers are represented by 64 bit floating point numbers.  It does allow integers to be stored with precision between -2^53 abd 2^54.
+* **number** - there is no distinction between real and integer type variables.  All numbers are represented by 64 bit floating point numbers.  It does allow integers to be stored with precision between -2^53 and 2^54.
 * **strings** - strings in JavaScript are immutable, meaning they can't be changed, you can only create a new modified version of the string.  So JavaScript functions such as replace() do not change the original string, but instead must be assigned to a new string.
-* **boolean** - binary (only two possible values) true/false, yes/no, on/off.  true/false are predefined and used to set and evaluate booleans.
+* **boolean** - binary (only two possible values) true/false, yes/no, on/off.  true/false are predefined and used to set and evaluate boolean.
 * **object** - everything else is an Object.  JavaScript does include predefined objects such as **Date** (including Time) that include constructs for initializing and predefined methods and properties for working with them.  Another example would be the **RegExp** object for dealing with regular expressions.
 
 Primitive types (number, string, and boolean) are value types and immutable, while objects are reference types and mutable
@@ -67,7 +67,7 @@ Functions in JavaScript in a lot of ways behave like functions in other language
 
 ## Standard functions
 
-```javascript
+```JavaScript
 function sum(x, y) {
   return x + y;
 }
@@ -77,7 +77,7 @@ let total = sum(200, 550);
 
 ## Function expressions
 
-```javascript
+```JavaScript
 let func = function (str) {
     console.log('Hello, ' + str);
 };
@@ -88,9 +88,9 @@ Note the function variable (func in this case) can also be passed to other funct
 
 ## Inline function expressions
 
-The inline unnammed function `(item, pos)=>{` is using ES6 arrow function syntax, ES5 function(item, pos) {` syntax is also available
+The inline unnamed function `(item, pos)=>{` is using ES6 arrow function syntax, ES5 function(item, pos) {` syntax is also available
 
-```javascript
+```JavaScript
 // Get rid of duplicate entries in matches array
 let uniqueMatches = matches.filter((item, pos)=>{
     return matches.indexOf(item)== pos; 
@@ -101,18 +101,18 @@ let uniqueMatches = matches.filter((item, pos)=>{
 
 The following function will be invoked when the JavaScript file is loaded by the HTML page:
 
-```javascript
+```JavaScript
 (function () {
     console.log('Script loaded');
 })();
 ```
-Note the open parenthis at the end is what makes this anonymous function expression self-invoking
+Note the open parenthesis at the end is what makes this anonymous function expression self-invoking
 
 ## Object methods (using function expressions)
 
 Uses ES6 arrow function syntax here, but the ES5 `fullname: function() {` syntax works as well.
 
-```javascript
+```JavaScript
 // define object literal 
 let person = {
   firstName: 'Billy',
@@ -130,7 +130,7 @@ Note that the same principle and basic technique applies to other object types, 
 
 You can create objects using what is referred to as function constructors
 
-```javascript
+```JavaScript
 function person(first, last) {
     this.firstName = first;
     this.lastName = last;
@@ -178,7 +178,7 @@ When a form is submitted it it reloads the entire page, which is often not desir
 
 * Have your code cancel the submit event
 
-```javascript
+```JavaScript
 let form = document.getElementById("FormID");
 
  form.addEventListener("submit", (e) => {
@@ -206,17 +206,17 @@ RegExp is a regular expression object with methods and properties to detail with
 ### Creating a RegExp object
 
 A regular expression can be assigned directly to a variable, with that variable becoming of type RegExp
-```javascript
+```JavaScript
 let regEx = /exp/g
 ```
 
 It can also be created with **new** using the RegExp constructor.  The second parameter is optional and provides flags ("g" = global, "m" = multi-line, "i" = ignore case)
-```javascript
+```JavaScript
 let regEx = new RegExp(/exp/, 'gm');
 ```
 This method is useful when you want to combine multiple components (strings and other regular expressions).  For example,
 
-```javascript
+```JavaScript
 let wBound = /\b/;
 let regEx = new RegExp(wBound.source + '^Test(ing|er|ed)$' + wBound.source, 'gm');
 ```
@@ -228,7 +228,7 @@ Using a string literal above but more typical a string variable, possibly from a
 
   Example loop with exec() - You would use this if your expression includes a global (multi match) flag
   
-  ```javascript
+  ```JavaScript
   while ( (match = regex.exec(targetText)) !== null) {
     // match[0] contains the match itself
     // here storing a list of the matches
@@ -263,7 +263,7 @@ In addition to these RegExp properties and methods, you can use the **String.mat
 
 ## Converting text from the DOM into a RegExp object
 
-```javascript
+```JavaScript
 let targetText = document.getElementById('data').value;
 let regex = new RegExp(document.getElementById('regex').value, 'gm');
 ```

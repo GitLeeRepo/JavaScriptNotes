@@ -107,7 +107,7 @@ Angular uses TypeScript rather than JavaScript itself
    ```
  
   Generates (the "g" option above) a component named user in src/app/components with its starter TypeScript and HTML files.  It also updates the app.module.ts file adding the new component.  
-* Your component initialisations should be placed in the ngOnInit() method within the UserComponent class just generated in the user.component.ts file (recommended over the constructor)  
+* Your component initialization should be placed in the ngOnInit() method within the UserComponent class just generated in the user.component.ts file (recommended over the constructor)  
 * Replace the default HTML in src/app-component.html with `<app-user></app-user>`.  app-user comes from the @Component directive selector: 'app-user' in the app/components/user/user.component.ts file.  Now the browser page shows the default "user works!" text from the user.component.html file.   
 * To create a display a property add a name property to the UserComponent class in app/component/user/user.component.ts, ex `name = 'Bill'` and display it through the app/component/user/user.component.html template using double curly brackets, ex `<h1>Hello {{name}}</h1>`
 
@@ -357,7 +357,7 @@ Angular has about 30 built in services, a few examples are:
   export class DataService {
 
     constructor() { 
-      console.log("Data Serivce connected");
+      console.log("Data Service connected");
     }
 
     getPosts() {

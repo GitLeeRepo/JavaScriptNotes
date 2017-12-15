@@ -98,7 +98,7 @@ Note the embedded arrays (membership) and objects (address)
 
 	```php
 	$query = 'SELECT * FROM users';
-	$result = mysqi_query($conn, $query));
+	$result = mysqli_query($conn, $query));
 
 	$users = mysqli_fetch_all($result, MYSQLI_ASSOC);
 

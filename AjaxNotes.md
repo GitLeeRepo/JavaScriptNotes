@@ -28,7 +28,7 @@ Notes on the AJAX programming model
 
 * Old way with onReadyStateChange
 
-    ```javascript
+    ```JavaScript
     var xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function () {
@@ -42,7 +42,7 @@ Note with this method you must check the readyState in addition to the status
 
 * New way with onload
 
-    ```javascript
+    ```JavaScript
     var xhr = new XMLHttpRequest();
 
     xhr.onload = function () {
@@ -58,7 +58,7 @@ Note here you don't need to check readyState since onload is only triggered when
 
 ## onprogress
 
-```javascript
+```JavaScript
 xhr.onprogress = function () {
     console.log("In onprogress");
 }
@@ -67,7 +67,7 @@ You can use this if you want to display a progress indicator
 
 ## onerror
 
-```javascript
+```JavaScript
 xhr.onerror = function () {
     console.log("Error Occurred");
 }
@@ -80,7 +80,7 @@ Use with onload to handle any errors in processing the request
 
 * Update the div section with contents of text file
 
-    ```javascript
+    ```JavaScript
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -119,7 +119,7 @@ Use with onload to handle any errors in processing the request
 
 * Get JSON data from the json\users.json file
 
-    ```javascript
+    ```JavaScript
     function loadUsers(outId) {
         var xhr = new XMLHttpRequest();
 
@@ -143,7 +143,7 @@ Use with onload to handle any errors in processing the request
 
 * Using the GitHub API to get user data
 
-    ```javascript
+    ```JavaScript
     function loadGitHubUsers(outId) {
         var xhr = new XMLHttpRequest();
 
@@ -181,7 +181,7 @@ As long as you take steps to prevent the page reload you can use a form to submi
 
 * Example calling a PHP script using the forms text field to provide a parameter:
 
-    ```javascript
+    ```JavaScript
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -229,7 +229,7 @@ This is the same as the prior example, but it uses POST instead of GET.  Notice 
 
 * POST Example:
 
-    ```javascript
+    ```JavaScript
     <!DOCTYPE html>
     <html lang="en">
     <head>
