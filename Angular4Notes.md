@@ -8,6 +8,10 @@ Note: The actual code written while creating these notes is in the [Angular4Demo
 
 * [Angular 4 in 60 Minutes](https://www.youtube.com/watch?v=KhzGSHNhnbI) YouTube video by Traversy Media.  Many of the notes here are from following along with this video.
 
+## My Other Notes
+
+* [JavaScriptNotes](https://github.com/GitLeeRepo/JavaScriptNotes/blob/master/JavaScriptNotes.md#overview)
+
 # What is Angular
 
 * Front-end/Client-side JavaScript framework
