@@ -14,6 +14,7 @@ JavaScript notes, particularly as it applies to browsers
 * [JsonNotes](https://github.com/GitLeeRepo/JavaScriptNotes/blob/master/JsonNotes.md#overview)
 * [ESLintNotes](https://github.com/GitLeeRepo/JavaScriptNotes/blob/master/ESLintNotes.md#overview)
 * [PHPNotes](https://github.com/GitLeeRepo/PHPNotes/blob/master/PHPNotes.md#overview)
+* [PythonNotes](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#overview)
 * [WordPressNotes](https://github.com/GitLeeRepo/WordPressNotes/blob/master/WordPressNotes.md#overview)
 
 # Recent Versions
