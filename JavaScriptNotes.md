@@ -9,6 +9,10 @@ JavaScript notes, particularly as it applies to browsers
 
 ## My Other Notes
 
+* [AjaxNotes](https://github.com/GitLeeRepo/JavaScriptNotes/blob/master/AjaxNotes.md#overview)
+* [Angular4Notes](https://github.com/GitLeeRepo/JavaScriptNotes/blob/master/Angular4Notes.md#overview)
+* [JsonNotes](https://github.com/GitLeeRepo/JavaScriptNotes/blob/master/JsonNotes.md#overview)
+* [ESLintNotes](https://github.com/GitLeeRepo/JavaScriptNotes/blob/master/ESLintNotes.md#overview)
 * [PHPNotes](https://github.com/GitLeeRepo/PHPNotes/blob/master/PHPNotes.md#overview)
 * [WordPressNotes](https://github.com/GitLeeRepo/WordPressNotes/blob/master/WordPressNotes.md#overview)
 
