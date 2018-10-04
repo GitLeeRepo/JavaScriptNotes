@@ -3,8 +3,14 @@
 JavaScript notes, particularly as it applies to browsers
 
 # References
+
 * [W3 Schools](https://www.w3schools.com/js/default.asp)
 * [ES6 Series](https://www.youtube.com/watch?v=2LeqilIw-28&list=PLillGF-RfqbZ7s3t6ZInY3NjEOOX7hsBv) YouTube series by Traversy Media
+
+## My Other Notes
+
+* [PHPNotes](https://github.com/GitLeeRepo/PHPNotes/blob/master/PHPNotes.md#overview)
+* [WordPressNotes](https://github.com/GitLeeRepo/WordPressNotes/blob/master/WordPressNotes.md#overview)
 
 # Recent Versions
 
