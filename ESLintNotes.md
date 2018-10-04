@@ -6,6 +6,10 @@ Notes on ESLint for JavaScript (including Node.js, React, jQuery, etc)
 
 * [Main site](https://eslint.org/)
 
+## My Other Notes
+
+* [JavaScriptNotes](https://github.com/GitLeeRepo/JavaScriptNotes/blob/master/JavaScriptNotes.md#overview)
+
 # Installation
 
 The ESLint installation uses **NPM** (Node Package Module) therefore, Node.js must be installed.  The notes here are for setting it up globally, it can also be installed per project if desired.
