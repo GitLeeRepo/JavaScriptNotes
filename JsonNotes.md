@@ -7,6 +7,10 @@ Notes on the JSON data exchange format
 * [W3 Schools](https://www.w3schools.com/js/js_json_intro.asp) - JSON Tutorial and Reference
 * [JSON Crash Course](https://www.youtube.com/watch?v=wI1CWzNtE-M) - YouTube video by Traversy Media.  Many of the notes here come from this video.
 
+## My Other Notes
+
+* [JavaScriptNotes](https://github.com/GitLeeRepo/JavaScriptNotes/blob/master/JavaScriptNotes.md#overview)
+
 # JSON Key Ideas
 
 * JSON - JavaScript Object Notation
