@@ -73,6 +73,21 @@ Variables declared outside of all functions are global in scope.  Those variable
 
 **Hoisting** - a variable declared within the local function scope does not have to appear before where it is used, it is considered "hoisted" to the top of the function where it will be available regardless of its position.
 
+# String Formatting
+
+## Formatring Numbers to String with Separators (commas)
+
+From: [StackExchange](https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript)
+
+Supported in all modern browsers
+```js
+var n = 34523453.345
+n.toLocaleString()
+"34,523,453.345"
+```
+
+It also works in Node.js as of v0.12 via inclusion of Intl
+
 # Functions
 
 Functions in JavaScript in a lot of ways behave like functions in other languages, but they do have some fairly unique characteristics such as function expressions (both named and unnamed), function constructors for creating objects, and self-invoking functions.  Part of the unique nature of JavaScript functions is the fact that they are actually objects and can be treated like other objects (they have methods, properties, etc and can be assigned to other objects and available)
