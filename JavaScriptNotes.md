@@ -77,7 +77,9 @@ Variables declared outside of all functions are global in scope.  Those variable
 
 ## Formatring Numbers to String with Separators (commas)
 
-From: [StackExchange](https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript)
+Refer ti: 
+* [StackExchange](https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript) -- this example
+* [More Format Options](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString)
 
 Supported in all modern browsers
 ```js
