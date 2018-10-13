@@ -11,6 +11,7 @@ Note: The actual code written while creating these notes is in the [Angular4Demo
 ## My Other Notes
 
 * [JavaScriptNotes](https://github.com/GitLeeRepo/JavaScriptNotes/blob/master/JavaScriptNotes.md#overview)
+* [RestApiNotes](https://github.com/GitLeeRepo/RestApiNotes/blob/master/RestApiNotes.md#overview)
 
 # What is Angular
 
