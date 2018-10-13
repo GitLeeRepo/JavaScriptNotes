@@ -32,6 +32,8 @@ Notes on the AJAX programming model
 
 # Old vs New way of processing the response
 
+If you need to support older browsers (with pre IE 10 being an issue) you will need to use the **Old** method.  But for newer browsers the **New** method is preferred.
+
 * Old way with onReadyStateChange
 
     ```JavaScript
