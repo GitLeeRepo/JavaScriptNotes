@@ -10,6 +10,7 @@ Notes on the JSON data exchange format
 ## My Other Notes
 
 * [JavaScriptNotes](https://github.com/GitLeeRepo/JavaScriptNotes/blob/master/JavaScriptNotes.md#overview)
+* [RestApiNotes](https://github.com/GitLeeRepo/RestApiNotes/blob/master/RestApiNotes.md#overview)
 
 # JSON Key Ideas
 
