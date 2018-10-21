@@ -79,10 +79,14 @@ Variables declared outside of all functions are global in scope.  Those variable
 
 ## Assigning Multiline Strings to Variables in Code
 
-To **assign a multiline string to a variable** use **backquotes (\`)** rather than **single or double quotes**.
+To **assign a multiline string to a variable** use **backquotes \`** rather than **single or double quotes**.
 
 `
-\`
+str = `multiline
+quote
+be sure to remove
+leading spaces from 
+the margins`
 `
 
 ## String Formatting
