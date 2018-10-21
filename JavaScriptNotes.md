@@ -75,7 +75,17 @@ Variables declared outside of all functions are global in scope.  Those variable
 
 **Hoisting** - a variable declared within the local function scope does not have to appear before where it is used, it is considered "hoisted" to the top of the function where it will be available regardless of its position.
 
-# String Formatting
+# Strings
+
+## Assigning Multiline Strings to Variables in Code
+
+To **assign a multiline string to a variable** use **backquotes (\`)** rather than **single or double quotes**.
+
+`
+\`
+`
+
+## String Formatting
 
 ## Formatring Numbers to String with Separators (commas)
 
