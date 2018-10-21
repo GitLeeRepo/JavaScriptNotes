@@ -82,11 +82,11 @@ Variables declared outside of all functions are global in scope.  Those variable
 To **assign a multiline string to a variable** use **backquotes \`** rather than **single or double quotes**.
 
 ```js
-str = `multiline
-quote
-be sure to remove
-leading spaces from 
-the margins`
+str = `multiline quote
+be sure to remove leading spaces from 
+the margins, unless you want leading spaces
+  two leading spaces
+    four leading spaces`
 ```
 
 ## String Formatting
