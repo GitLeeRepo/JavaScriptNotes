@@ -33,6 +33,34 @@ JavaScript notes, particularly as it applies to browsers
     * Promises and Asynchronous data    
     * Arrow functions   
 
+# Coding Preliminaries
+
+## JavaScript Comments
+
+JavaScript proides both **single line** and **multi line comments**:
+
+``js
+// Single cline comment
+/*
+   Multi-line
+   comment
+*/
+``
+
+## JavaScript Console
+
+The **console** is provided by the **web browser** and is useful for debug code or getting quick feedback.  For **Chrome** it can be accessed with **F12** or from the menu  **More Tools >> Developer Tools**.  To write to the console use the **console.log(str)** command.
+
+```js
+str = "Hello world""
+console.log(str);
+```
+
+## End of Statement Character
+
+As with other **C based languages** JavaScript uses the **semicolon**
+
+
 # Data Types
 
 JavaScript is not a strongly typed language in that you do not declare the type when the variable is created.  Its type is determined by what it is assigned an how it is used.  It contains three primitive types: number, string, and boolean, with everything else being an object.
