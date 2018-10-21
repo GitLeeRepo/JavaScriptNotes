@@ -77,14 +77,23 @@ Variables declared outside of all functions are global in scope.  Those variable
 
 # Strings
 
+## String Quoting
+
+In JavaScript you can use either **single** or **double quotes**.  To include a **single quote** within the string, either **escape** it with a **backslash** or include it in a **double quoted** string.  To include a **double quote** within the string, either **escape** it with a **backslash** or include it in a **single quoted** string.
+
+```js
+str = "That is Sally's car";
+str2 = 'and I quote, "this is awesome"`;
+```
+
 ## Assigning Multiline Strings to Variables in Code
 
 To **assign a multiline string to a variable** use **backquotes \`** rather than **single or double quotes**.
 
 ```js
 str = `multiline quote
-be sure to remove leading spaces from 
-the margins, unless you want leading spaces
+be sure to remove leading spaces from the
+left margin, unless you want leading spaces
   two leading spaces
     four leading spaces`
 ```
