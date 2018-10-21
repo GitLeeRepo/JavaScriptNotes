@@ -83,7 +83,7 @@ In JavaScript you can use either **single** or **double quotes**.  To include a 
 
 ```js
 str = "That is Sally's car";
-str2 = 'and I quote, "this is awesome"';
+str2 = 'and to quote the wise old man, "this is awesome"';
 ```
 
 ## Assigning Multiline Strings to Variables in Code
