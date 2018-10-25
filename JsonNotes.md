@@ -97,6 +97,36 @@ Note the embedded arrays (membership) and objects (address)
         // now person is a valid object: person.name is a legal again	
     </script>
     ```
+    
+## Example 3 - Get an Array of Objects from JSON on a PHP Server
+
+* Call using **GET** to retrieve **JSON** on **PHP Server** `php/repomanager/local_repo_info.php`
+* **Convert JSON** to a **JavaScript object**
+* use a **forEach()** method on the Object, which is an **array of objects**
+* Display the **name** property for **each object** in the **array**
+* **timecode query string** is there for development purposes only so the **browser cache** gets refreshed on each call.
+
+```js
+function refreshLocalRepoList() {
+    document.getElementById('repoListOut').innerHTML = "made it to call<br>";
+    // Ajax Request
+    var xhr = new XMLHttpRequest();
+    xhr.onload = function () {
+        if (this.status === 200) {
+            var str = '';
+            var myObj = JSON.parse(this.responseText);
+            myObj.forEach(element => {
+                str += element.name + '<br>';
+            });
+            console.log(myObj);
+            document.getElementById("repoListOut").innerHTML = str;
+        }  
+    }
+        
+    xhr.open("GET", "php/repomanager/local_repo_info.php?" + "timecode=" + Date.now(), true);
+    xhr.send();
+}
+```
 
 # PHP Example Returning JSON
 
