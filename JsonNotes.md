@@ -101,7 +101,7 @@ Note the embedded arrays (membership) and objects (address)
 ## Example 3 - Get an Array of Objects from JSON on a PHP Server
 
 * Call using **GET** to retrieve **JSON** on **PHP Server** `php/repomanager/local_repo_info.php`
-* **Convert JSON** to a **JavaScript object**
+* **Convert JSON** to a **JavaScript object** using the **JSON.parse()** method
 * use a **forEach()** method on the Object, which is an **array of objects**
 * Display the **name** property for **each object** in the **array**
 * **timecode query string** is there for development purposes only so the **browser cache** gets refreshed on each call.
